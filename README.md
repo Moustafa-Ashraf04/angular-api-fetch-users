@@ -4,6 +4,10 @@
 
 This project utilizes Angular to fetch user data from a public API, providing functionalities for pagination, searching, and displaying detailed user information. It includes a loading component to enhance user experience during data retrieval.
 
+## Deployment
+
+The project is deployed and accessible at [Vercel](https://angular-api-fetch-users.vercel.app/users).
+
 ## Features
 
 - **Pagination**: Navigate through user data in pages, displaying a limited number of users per page.
@@ -11,22 +15,16 @@ This project utilizes Angular to fetch user data from a public API, providing fu
 - **User Details**: View detailed information for each user, including their address and contact details.
 - **Loading Component**: Display a loading indicator while fetching data from the API to improve user interface responsiveness.
 
-## Installation
+## Technologies Used
 
-Provide instructions on how to install and run your project locally.
+- Angular
+- TypeScript
+- HTML
+- CSS
 
-## Usage
+## Getting Started
 
-Explain how to use the pagination and search functionalities, as well as how to view user details.
-
-## Screenshots
-
-(Optional) Include screenshots or GIFs showcasing the project's functionality.
-
-## Contributing
-
-Explain how others can contribute to your project, including guidelines for pull requests and code style.
-
-## License
-
-Specify the license under which your project is distributed.
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the application using `ng serve`.
+4. Navigate to `http://localhost:4200/` in your browser.
