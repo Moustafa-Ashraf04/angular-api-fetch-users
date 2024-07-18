@@ -1,0 +1,24 @@
+<div class="card shadow-lg w-100" [routerLink]="['/users', user.id]">
+  <div class="card-body">
+    <h2 class="card-title text-center text-danger">{{ user.name }}</h2>
+    <h4><strong> username:</strong> {{ user.username }}</h4>
+    <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+    <p class="card-text">
+      <strong>Address:</strong> {{ user.address.suite }},
+      {{ user.address.street }}, {{ user.address.city }}
+    </p>
+
+    <p class="card-text">
+      <strong>Zipcode:</strong> {{ user.address.zipcode }}
+    </p>
+    <p class="card-text"><strong>Phone:</strong> {{ user.phone }}</p>
+    <p class="card-text"><strong>Website: </strong> {{ user.website }}</p>
+    <p class="card-text">
+      <strong>Company name:</strong> {{ user.company.name }}
+    </p>
+    <p class="card-text">
+      <strong>Company catchphrase:</strong> {{ user.company.catchPhrase }}
+    </p>
+    <p class="card-text"><strong>Company bs:</strong> {{ user.company.bs }}</p>
+  </div>
+</div>

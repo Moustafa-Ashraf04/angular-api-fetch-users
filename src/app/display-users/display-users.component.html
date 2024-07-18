@@ -1,0 +1,74 @@
+@if (isloading) {
+<app-loading></app-loading>
+}
+<div class="d-flex flex-column min-vh-100">
+  <div class="container">
+    <div class="my-4 py-4">
+      <h1 class="text-center">Fetch users app</h1>
+      <div class="row justify-content-center">
+        <div class="col-12 d-flex gap-2 col-md-8">
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="Search users by name or username"
+            name="user"
+            [(ngModel)]="searchTerm"
+          />
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            (click)="filterUsers()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      @if (pagedUsers.length < 1) {
+      <div>
+        <h2 class="text-center">No users found!</h2>
+      </div>
+      } @for (user of pagedUsers; track $index) {
+      <app-user-card
+        class="col-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center"
+        [user]="user"
+      ></app-user-card>
+      }
+    </div>
+  </div>
+
+  <div class="mt-auto">
+    <!-- bootstrap pagination  -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item" [class.disabled]="currentPage === 0">
+          <a
+            class="page-link"
+            (click)="goToPage(currentPage - 1)"
+            aria-label="Previous"
+          >
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        @for (page of getPageNumbers();track $index) {
+        <li class="page-item" [class.active]="currentPage === page">
+          <a class="page-link" (click)="goToPage(page)">{{ page + 1 }}</a>
+        </li>
+        }
+        <li
+          class="page-item"
+          [class.disabled]="currentPage >= getPageNumbers().length - 1"
+        >
+          <a
+            class="page-link"
+            (click)="goToPage(currentPage + 1)"
+            aria-label="Next"
+          >
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

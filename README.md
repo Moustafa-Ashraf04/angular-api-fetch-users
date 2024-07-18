@@ -1,28 +1,32 @@
-# AngularApiFetch
+# Fetch Users from Public API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+## Description
 
-## Development server
+This project utilizes Angular to fetch user data from a public API, providing functionalities for pagination, searching, and displaying detailed user information. It includes a loading component to enhance user experience during data retrieval.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Pagination**: Navigate through user data in pages, displaying a limited number of users per page.
+- **Search Functionality**: Search users by name or username to quickly find specific users.
+- **User Details**: View detailed information for each user, including their address and contact details.
+- **Loading Component**: Display a loading indicator while fetching data from the API to improve user interface responsiveness.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+Provide instructions on how to install and run your project locally.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Running unit tests
+Explain how to use the pagination and search functionalities, as well as how to view user details.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Screenshots
 
-## Running end-to-end tests
+(Optional) Include screenshots or GIFs showcasing the project's functionality.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contributing
 
-## Further help
+Explain how others can contribute to your project, including guidelines for pull requests and code style.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# angular-api-fetch-users
+## License
+
+Specify the license under which your project is distributed.
